@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".activity.ui.login.LoginActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="209dp"
+        tools:layout_editor_absoluteY="308dp">
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:hint="@string/prompt_password"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:selectAllOnFocus="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/username" />
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="160dp"
+            android:layout_marginEnd="24dp"
+            android:hint="@string/prompt_qq"
+            android:inputType="textEmailAddress"
+            android:selectAllOnFocus="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            app:layout_constraintBottom_toTopOf="@+id/username"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo" />
+        <org.mirai.zhao.dice.component.FixedTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/LoginAdvice"
+            app:layout_constraintBottom_toTopOf="@+id/protocolAdvice"
+            app:layout_constraintStart_toStartOf="parent" />
+        <org.mirai.zhao.dice.component.FixedTextView
+            android:id="@+id/protocolAdvice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/protocolAdvice"
+            app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/username">
+
+            <RadioButton
+                android:id="@+id/protocol_watch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/watch" />
+
+            <RadioButton
+                android:id="@+id/protocol_pad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/pad" />
+
+            <RadioButton
+                android:id="@+id/protocol_android_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/android_phone" />
+
+            <RadioButton
+                android:id="@+id/protocol_mac"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/apple_mac" />
+            <RadioButton
+                android:id="@+id/protocol_ipad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/apple_ipad" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="16dp"
+            android:enabled="false"
+            android:text="@string/action_sign_in"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="214dp"
+        tools:layout_editor_absoluteY="358dp">
+
+        <org.mirai.zhao.dice.component.FixedTextView
+            android:id="@+id/loginProcessPrint"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:background="#DDF4E7E7"
+            android:text="@string/loginprocessprint"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/loading"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

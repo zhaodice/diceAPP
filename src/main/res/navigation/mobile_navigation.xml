@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="org.mirai.zhao.dice.activity.ui.home.HomeFragment"
+        android:label="主页"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/nav_console"
+        android:name="org.mirai.zhao.dice.activity.ui.console.ConsoleFragment"
+        android:label="控制台"
+        tools:layout="@layout/fragment_console" />
+
+    <fragment
+        android:id="@+id/nav_setting"
+        android:name="org.mirai.zhao.dice.activity.ui.setting.SettingsFragment"
+        android:label="设置"
+        tools:layout="@layout/fragment_settings" />
+
+    <fragment
+        android:id="@+id/nav_login"
+        android:name="org.mirai.zhao.dice.activity.ui.accountManager.AccountManagerFragment"
+        android:label="登陆"
+        tools:layout="@layout/fragment_accounts" />
+</navigation>

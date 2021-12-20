@@ -1,0 +1,111 @@
+{
+	"骰基本信息": [
+		["MASTER_INFO", "（master）骰主信息(文本)", "用于修改触发纯master指令时的内容"],
+		["MASTER_QQ", "（×）骰主QQ", "一行一个QQ号，用于程序配对识别命令触发者是否为master时所用"],
+		["DICE_NAME", "（×）骰娘姓名", "请勿写自我介绍，应该写单纯的“名字”，该名字会影响log记录里骰娘自身的名字，以及骰娘的自称{nick}"]
+	],
+	"其他配置": [
+		["WHITE_LIST", "（×）群白名单", "一行一个群号，用于私骰授权"],
+		["REPLY_EQU", "（×）匹配词回复", "格式是一行一个关键词/内容，例:赵怡然/天才!"],
+		["PREFIX", "（×）指令前缀", "请勿改成别的，它默认应该是“.”，才能识别“.r”，一旦改成“其他”，那么指令前面必须也是“其他”才能触发，如“其他r”。"]
+	],
+
+	"其他自定义语句": [
+		["SENTENCE_ILLEGAL_TOO_MUCH", "（×）非法操作，超出资源限制", "骰数等超过了最大限制说的语句"],
+		["SENTENCE_ILLEGAL", "（×）非法操作，指令不合规", "指令有错误时的说的语句"],
+		["DICE_SPAM_WARNING", "刷屏反制自定义警告语", "触发骰次数太频繁，说点什么？"],
+		["DICE_JOIN_SAY", "第一次入群时发送的消息", "被拉入群了，说点什么自我介绍一下？"],
+		["DICE_ADD_FRIEND", "第一次被加好友时发送的消息", "被加好友了，说点什么自我介绍一下？"],
+		["PLAYER_COUNT_TOO_MUCH", "人物卡数量超过10，不能再增加，请清理", "人物卡太多了，可以pc clr全部删除或者pc del + 名字 看着删"],
+		["SENTENCE_RULE_QUERY_FAILURE", "（rules）联机查询失败", "没能找到对应规则，可能是网络问题或者没收录，说点什么？"],
+		["SENTENCE_SETCOC_DENIED", "（setcoc）无权设置房规", "不是管理员是不能设置房规的，这时应该说点什么？"]
+	],
+
+	"指令 退群DISMISS": [
+		["DICE_DISMISS_AGREE", "（dismiss）dismiss退群成功", "被指令退群了，说点告别的话？"],
+		["DICE_DISMISS_DENIED", "（dismiss）dismiss退群失败-没有权限", "被指令退群了，但对方没有得逞，想说点什么？"]
+	],
+	"指令 跑团记录LOG": [
+		["SENTENCE_LOG_OPEN", "（log on）聊天记录程序被打开", "开始记录log时的发言，其中{logname}代表日志名"],
+		["SENTENCE_LOG_CLOSE", "（log off）聊天记录程序被暂停", "停止记录log时的发言，其中{logname}代表日志名"],
+		["SENTENCE_LOG_DENIED", "（log）非masterQQ请求log被拒绝", "私骰只有master才能使用log功能，说点什么？"],
+		["SENTENCE_LOG_END", "（log end）聊天记录程序结束并开始上传", "结束log并开始上传了，跑团故事宣告结束，说点什么？"],
+		["SENTENCE_LOG_NOT_FOUND", "（log end/off/on）log找不到指定文件名", "并没有找到指定的日志呢，说点什么？"],
+		["SENTENCE_LOG_NOT_OPEN", "（log end/off）log没有打开的情况下试图关闭/暂停", "关闭/暂停一个没有进行中的日志是没有意义的，说点什么？"],
+		["SENTENCE_LOG_ALREADY", "（log on）log已经打开了不能再打开", "打开一个正在进行中的日志是没有意义的，说点什么？"],
+		["SENTENCE_LOG_RESUME", "（log on）重新打开已经off暂停的日志", "log日志再次打开，开始继续上次的日志记录，说点什么？"]
+	],
+
+	"指令 牌堆抽取DRAW/DECK": [
+		["SENTENCE_DRAW_FAILURE", "（draw/deck）牌堆抽取失败——牌堆找不到或出错", "牌堆没有找到呢，说点什么？其中{keyword}代表牌堆名"],
+		["SENTENCE_DRAW_SUCCESS", "（draw/deck）牌堆抽取成功", "牌堆找到了呢，说点什么？其中{keyword}代表牌堆名"]
+	],
+	"指令 骰娘BOT": [
+		["SENTENCE_DICE_ROBOT_TEXT", "（bot）BOT信息", "裸发bot指令时的发言"],
+		["SENTENCE_DICE_DENIED", "（bot）无权开关骰子", "没有打开骰的权限，说点什么？"],
+		["SENTENCE_DICE_OPEN", "（bot on）骰子被打开", "骰被打开了，说点什么？"],
+		["SENTENCE_DICE_CLOSE", "（bot off）骰子被关闭", "骰被关闭了，说点什么？"],
+		["SENTENCE_OPEN_ALREADY", "（bot on）骰子已经打开，不能重复打开", "骰在打开的情况下又打开了，说点什么？"],
+		["SENTENCE_CLOSE_ALREADY", "（bot off）骰子已经关闭，不能重复关闭", "骰在关闭的情况下又关闭了，说点什么？"]
+	],
+	"指令 帮助裸指令HELP": [
+		["SENTENCE_DICE_HELP_TEXT", "（help）HELP信息", "当有人裸指令help时说点什么？顺便提一下helpdoc可以自定义help的词条哦"]
+	],
+
+	"指令 鉴定，骰点类语句": [
+		["SENTENCE_RABP", "（ra/rc）技能鉴定语句", "开始鉴定了，第一句话说点什么？{roll}为结果"],
+		["SENTENCE_RABP_WITH_REASON", "（ra/rc）带理由的技能鉴定语句", "开始鉴定了，第一句话说点什么？，{reason}为理由,{roll}为结果"],
+		["SENTENCE_BIG_FAILURE", "（ra/rb/rp/sc）骰出大失败", "大失败了，说点什么？"],
+		["SENTENCE_FAILURE", "（ra/rb/rp/sc）骰出失败", "失败了，说点什么？"],
+		["SENTENCE_BIG_SUCCESS", "（ra/rb/rp/sc）骰出大成功", "大成功，说点什么？"],
+		["SENTENCE_VERY_HARD_SUCCESS", "（ra/rb/rp/sc）骰出极难成功", "极难成功，说点什么？"],
+		["SENTENCE_HARD_SUCCESS", "（ra/rb/rp/sc）骰出困难成功", "困难成功，说点什么？"],
+		["SENTENCE_SUCCESS", "（ra/rb/rp/sc）骰出成功", "成功，说点什么？"],
+		["SENTENCE_ROLL", "（r/ww/dx）骰点", "开始roll点了，说点什么？其中{roll}代表结果"],
+		["SENTENCE_ROLL_WITH_REASON", "（r/ww/dx）带理由的骰点", "开始roll点了，说点什么？{reason}为理由,{roll}为结果"],
+		["SENTENCE_HIDDEN_ROLL", "（rh）暗骰在群里说点啥", "居然暗骰，说点什么吓唬一下新人？（不是）"],
+		["FIRST_ATTACKING_SENTENCE", "（ri）先攻骰点语句", "骰出先攻点，说点什么？{roll}为结果"]
+	],
+
+	"指令 对抗骰点RAV": [
+		["SENTENCE_RACV_START", "（rav/rcv）对抗骰指令发起", "对抗发起，其中{competitor_first}代表先手"],
+		["SENTENCE_RACV_FIRST_WIN", "（rav/rcv）对抗骰指令，先手胜利", "对抗先手胜利，其中{competitor_first}代表先手,{competitor_last}代表后手,{winner}代表赢家"],
+		["SENTENCE_RACV_LAST_WIN", "（rav/rcv）对抗骰指令，后手胜利", "对抗后手胜利，其中{competitor_first}代表先手,{competitor_last}代表后手,{winner}代表赢家"],
+		["SENTENCE_RACV_EQUAL", "（rav/rcv）对抗骰指令，平局", "对抗平局，其中{competitor_first}代表先手,{competitor_last}代表后手"],
+		["SENTENCE_RACV_ALL_FAILURE", "（rav/rcv）对抗骰指令，全部失败", "对抗全部失败，其中{competitor_first}代表先手,{competitor_last}代表后手"]
+	],
+	"指令 名字修改 nn": [
+		["SENTENCE_CHANGE_NAME", "（nn）修改名字成功", "因为nn后面的名字【不存在】，故将当前卡的名字修改为nn后面的名字，说点什么？"],
+		["SENTENCE_CHANGE_CARD", "（nn）设置现存档位成功", "因为nn后面的名字【存在】，故直接切换到了这个存在的卡，说点什么？"]
+	],
+	"指令 属性修改 ST": [
+		["SENTENCE_GET_PAYER_INFO", "（stshow）获取玩家属性", "以下是玩家数据，说点什么？"],
+		["SENTENCE_SET_PAYER_INFO", "（st）设置玩家属性", "录卡/修改属性成功了，说点什么？"]
+	],
+	"指令 今日人品": [
+		["SENTENCE_JRRP", "（jrrp）今日人品", "看看人品多少？{jrrp}代表人品值"]
+	],
+	"指令 技能成长": [
+		["SENTENCE_PROMOTION_SUCCESS", "（en）技能成长鉴定成功", "技能成长了，说点什么？"],
+		["SENTENCE_PROMOTION_FAILURE", "（en）技能成长鉴定失败", "技能不变，说点什么？"]
+	],
+
+	"指令 理智鉴定 SanCheck": [
+		["SC_FAILURE", "（sc）失败", "没能通过理智鉴定，说点什么？"],
+		["SC_SUCCESS", "（sc）成功", "通过了理智鉴定，说点什么？"],
+		["SC_BIG_FAILURE", "（sc）大失败", "没能通过理智鉴定还大失败了，说点什么？"],
+		["SC_BIG_SUCCESS", "（sc）大成功", "通过理智鉴定还大成功了，说点什么？"],
+		["SC_PRE_SENTENCE", "（sc）sc前置语句", "在sc时最前面的第一句话说点什么？其中{result}的结果"],
+		["SC_INNOCENT_CRAZY", "（sc）掉san超过5，灵感失败", "本来应该疯的，但傻人有傻福，说点什么？"],
+		["SC_TEMPORARY_CRAZY", "（sc）掉san超过5，临时疯狂", "调查员已看穿了一切，理解了不可名状的东西，说点什么？"],
+		["SC_RANDOM_CRAZY", "（sc）掉san达到1/5，不定时疯狂", "掉的理智太多了，进入不定时疯狂，说点什么？"],
+		["SC_PERMANENT_CRAZY", "（sc）掉san为0，永久疯狂", "调查员彻底变成了疯子，说点什么？"]
+	],
+
+	"指令 跑团围观OB指令": [
+		["SENTENCE_OB_JOIN", "（ob）加入ob位成功", "加入ob成功，说点什么？"],
+		["SENTENCE_OB_JOIN_FAILURE", "（ob）加入ob位失败，已经加入", "加入ob失败，说点什么？"],
+		["SENTENCE_OB_EXIT", "（ob exit）退出ob位成功", "退出ob成功，说点什么？"],
+		["SENTENCE_OB_EXIT_FAILURE", "（ob exit）退出ob位失败，未曾加入", "退出ob失败，说点什么？"]
+	]
+}

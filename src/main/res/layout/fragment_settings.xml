@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ui.setting.SettingsFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch_openDice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:switchMinWidth="50dp"
+            android:text="@string/switch_openDice" />
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch_publicMode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:switchMinWidth="10dp"
+            android:text="@string/switch_publicMode" />
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch_keyAutoReply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/switch_keyAutoReply" />
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch_systemSplit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/switch_systemSplit" />
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch_bootStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/switch_bootStart" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch_silkEncoder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/switch_silkEncoder" />
+
+        <org.mirai.zhao.dice.component.ListViewForScrollView
+            android:id="@+id/settingsList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:groupIndicator="@null" />
+    </LinearLayout>
+</ScrollView>

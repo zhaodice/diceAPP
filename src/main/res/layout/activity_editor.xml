@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.ActivityEditor">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <org.mirai.zhao.dice.component.FixedTextView
+            android:id="@+id/edit_notice_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp" />
+
+        <org.mirai.zhao.dice.component.FixedTextView
+            android:id="@+id/edit_notice_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minLines="3"
+            android:background="#FFEBEE"/>
+
+        <EditText
+            android:id="@+id/edt_order_note_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="@string/emptyContent"
+            android:gravity="start"
+            android:hint="@string/emptyContent"
+            android:inputType="textMultiLine"
+            android:minLines="20"
+            android:padding="5dp"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/saveAndUpper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/strSaveAndUpper" />
+
+            <Button
+                android:id="@+id/saveAndNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/strSaveAndNext" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/saveAndExit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/strSaveAndExit" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
